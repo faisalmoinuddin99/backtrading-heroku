@@ -1,0 +1,41 @@
+{% extends 'base.html' %} {% block title %} Home {% endblock title %} {% block
+body %}
+<div class="container my-3">
+  <h2 class="text-center mt-3">Set Cash</h2>
+  <form action="/" method="POST">
+    <div class="my-5">
+      <input
+        type="text"
+        class="form-control"
+        id="setCash"
+        placeholder="Please enter the amount"
+        name="setCash"
+      />
+    </div>
+
+    <div class="my-5">
+      <select
+        class="form-select form-select-sm"
+        aria-label=".form-select-sm example"
+        name="strategy_type"
+
+      >
+        <option  id="strategy" selected>Select Strategy</option>
+        <option   id="strategy" value="TestStrategy">TestStrategy</option>
+        <option   id="strategy" value="SmaCross">SmaCross</option>
+
+      </select>
+    </div>
+
+    <button
+      type="submit"
+      class="btn btn-outline-dark"
+      id="btnFetch"
+      onclick="this.classList.toggle('button--loading')"
+    >
+      <span class="button__text">Plot Graph</span>
+    </button>
+  </form>
+
+  {% endblock body %}
+</div>

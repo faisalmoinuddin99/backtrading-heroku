@@ -1,0 +1,19 @@
+{% extends 'base.html' %} {% block title %} Show {% endblock title %} {% block
+body %}
+<div class="container my-3">
+  <h2 class="text-center mt-3">BackTrading App</h2>
+
+  {% if error_string %}
+  <div class="alert alert-danger mt-3" role="alert">
+    <p><h3>400 Bad Request</h3>
+    <p>Seems like, you have'nt entered the cash</p>
+    </p>
+    
+  </div>
+  {% else %}
+  <div class="alert alert-success" role="alert">
+<!--    <h5>{{ video_title }}</h5>-->
+    completed...🥳
+  </div>
+  {% endif %} {% endblock body %}
+</div>
